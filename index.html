@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Product Owner & Business Analyst with 10+ years of experience in health tech. Specializing in product discovery, requirement management, and solution design.">
+    <meta name="keywords" content="Product Owner, Business Analyst, Health Tech, Agile, Scrum, Product Discovery">
+    <meta name="author" content="Your Name">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Your Name - Product Owner & Business Analyst">
+    <meta property="og:description" content="10+ years of experience transforming healthcare through innovative digital solutions.">
+    <meta property="og:image" content="assets/images/og-image.jpg">
+
+    <title>Your Name | Product Owner & Business Analyst</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+    <noscript>
+        <style>
+            /* Show content when JS is disabled */
+            .fade-in { opacity: 1 !important; transform: none !important; }
+            #projects-grid { display: none !important; }
+            .noscript-content { display: block !important; }
+            .noscript-notice {
+                background: #fef3cd;
+                color: #856404;
+                padding: 1rem;
+                text-align: center;
+                border-bottom: 1px solid #ffeeba;
+            }
+        </style>
+    </noscript>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <noscript>
+        <div class="noscript-notice">
+            This website works best with JavaScript enabled. Some interactive features may not be available.
+        </div>
+    </noscript>
+
+    <!-- Navigation -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo" data-content="personal.name">YourName</a>
+
+            <button class="nav__toggle" id="nav-toggle" aria-label="Toggle navigation menu">
+                <span class="nav__toggle-bar"></span>
+                <span class="nav__toggle-bar"></span>
+                <span class="nav__toggle-bar"></span>
+            </button>
+
+            <!-- Navigation items rendered dynamically from content.js -->
+            <ul class="nav__menu" id="nav-menu">
+                <li class="nav__item">
+                    <a href="#hero" class="nav__link active">Home</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#about" class="nav__link">About</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#projects" class="nav__link">Projects</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#contact" class="btn btn--nav-cta">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="hero">
+            <div class="hero__content container">
+                <p class="hero__greeting fade-in" data-content="hero.greeting">Hello.</p>
+                <h1 class="hero__title fade-in" data-content="hero.headline">I'm Your Name.</h1>
+                <h2 class="hero__subtitle fade-in" data-content="hero.subtitle">Product Owner & Business Analyst specializing in health tech.</h2>
+
+                <div class="hero__buttons fade-in">
+                    <a href="#projects" class="btn btn--primary" data-content="hero.buttons.primary.text" data-content-href="hero.buttons.primary.href">View My Work</a>
+                    <a href="#contact" class="btn btn--secondary" data-content="hero.buttons.secondary.text" data-content-href="hero.buttons.secondary.href">Get in Touch</a>
+                    <a href="assets/documents/cv.pdf" class="btn btn--outline" data-content-href="personal.cvPath" download>
+                        <svg class="btn__icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="7 10 12 15 17 10"></polyline>
+                            <line x1="12" y1="15" x2="12" y2="3"></line>
+                        </svg>
+                        <span data-content="hero.buttons.cv.text">Download CV</span>
+                    </a>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- About Section -->
+        <section class="about section" id="about">
+            <div class="container">
+                <h2 class="section__title fade-in" data-content="about.sectionTitle">About Me</h2>
+
+                <div class="about__content">
+                    <div class="about__image-wrapper fade-in">
+                        <div class="about__image">
+                            <img src="assets/images/profile-placeholder.jpg"
+                                 data-content-src="about.profileImage.src"
+                                 data-content-alt="about.profileImage.alt"
+                                 alt="Your Name - Product Owner & Business Analyst"
+                                 loading="lazy">
+                        </div>
+                        <div class="about__experience-badge">
+                            <span class="about__experience-number" data-content="about.yearsExperience">10+</span>
+                            <span class="about__experience-text">Years Experience</span>
+                        </div>
+                    </div>
+
+                    <div class="about__text fade-in">
+                        <!-- Paragraphs rendered dynamically from content.js -->
+                        <div id="about-paragraphs">
+                            <p>With over a decade of experience in the health tech industry, I specialize in bridging the gap between business needs and technical solutions. My passion lies in creating digital products that make healthcare more accessible, efficient, and patient-centered.</p>
+
+                            <p>Throughout my career, I've had the privilege of working with healthcare providers, insurance companies, and health tech startups to deliver products that genuinely improve patient outcomes and streamline clinical workflows.</p>
+
+                            <p>I believe in a collaborative approach to product development, combining deep domain expertise with agile methodologies to deliver value incrementally while maintaining a clear strategic vision.</p>
+                        </div>
+
+                        <h3 class="about__competencies-title" data-content="about.competenciesTitle">Key Competencies</h3>
+
+                        <!-- Competencies rendered dynamically from content.js -->
+                        <div class="about__tags" id="competencies-container">
+                            <span class="tag">Product Discovery</span>
+                            <span class="tag">Requirement Management</span>
+                            <span class="tag">Solution Design</span>
+                            <span class="tag">Stakeholder Communication</span>
+                            <span class="tag">Agile/Scrum</span>
+                            <span class="tag tag--accent">Health Tech Domain</span>
+                        </div>
+
+                        <a href="assets/documents/cv.pdf" class="btn btn--primary about__cv-btn" data-content-href="personal.cvPath" download>
+                            <svg class="btn__icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                            </svg>
+                            Download Full CV
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="projects section" id="projects">
+            <div class="container">
+                <h2 class="section__title fade-in" data-content="projectsSection.title">Featured Projects</h2>
+                <p class="section__subtitle fade-in" data-content="projectsSection.subtitle">A selection of projects where I've driven product strategy and delivery in the health tech space.</p>
+
+                <!-- Projects rendered dynamically from content.js -->
+                <div class="projects__grid" id="projects-grid">
+                    <!-- Project cards will be rendered here by JavaScript -->
+                </div>
+
+                <!-- Static fallback for noscript -->
+                <div class="noscript-content projects__grid" style="display: none;">
+                    <article class="project-card">
+                        <div class="project-card__content">
+                            <div class="project-card__tags">
+                                <span class="project-card__tag project-card__tag--industry">Health Tech</span>
+                                <span class="project-card__tag project-card__tag--role">Product Owner</span>
+                            </div>
+                            <h3 class="project-card__title">Patient Portal Redesign</h3>
+                            <p class="project-card__description">Led the complete redesign of a patient portal serving 500K+ users, improving engagement by 45% and reducing support tickets by 30%.</p>
+                        </div>
+                    </article>
+                    <article class="project-card">
+                        <div class="project-card__content">
+                            <div class="project-card__tags">
+                                <span class="project-card__tag project-card__tag--industry">Health Tech</span>
+                                <span class="project-card__tag project-card__tag--role">Business Analyst</span>
+                            </div>
+                            <h3 class="project-card__title">Telehealth Platform Launch</h3>
+                            <p class="project-card__description">Defined requirements and coordinated delivery of a telehealth solution that enabled remote consultations for 200+ physicians.</p>
+                        </div>
+                    </article>
+                    <article class="project-card">
+                        <div class="project-card__content">
+                            <div class="project-card__tags">
+                                <span class="project-card__tag project-card__tag--industry">Health Tech</span>
+                                <span class="project-card__tag project-card__tag--role">Product Owner</span>
+                            </div>
+                            <h3 class="project-card__title">Clinical Workflow Optimization</h3>
+                            <p class="project-card__description">Streamlined clinical documentation workflows, reducing average documentation time by 40% while maintaining compliance.</p>
+                        </div>
+                    </article>
+                    <article class="project-card">
+                        <div class="project-card__content">
+                            <div class="project-card__tags">
+                                <span class="project-card__tag project-card__tag--industry">Health Tech</span>
+                                <span class="project-card__tag project-card__tag--role">Business Analyst</span>
+                            </div>
+                            <h3 class="project-card__title">Health Data Analytics Dashboard</h3>
+                            <p class="project-card__description">Designed and delivered an analytics platform providing actionable insights to healthcare administrators across 15 facilities.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Modal -->
+        <div class="modal" id="project-modal" aria-hidden="true">
+            <div class="modal__overlay" data-close-modal></div>
+            <div class="modal__content" role="dialog" aria-labelledby="modal-title">
+                <button class="modal__close" data-close-modal aria-label="Close modal">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+                <div class="modal__body">
+                    <h3 class="modal__title" id="modal-title">Project Title</h3>
+                    <div class="modal__details">
+                        <!-- Content populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Section -->
+        <section class="contact section" id="contact">
+            <div class="container">
+                <h2 class="section__title fade-in" data-content="contact.heading">Get In Touch</h2>
+                <p class="section__subtitle fade-in" data-content="contact.subtitle">Interested in collaborating or have a project in mind? Let's connect!</p>
+
+                <div class="contact__content">
+                    <form class="contact__form fade-in" id="contact-form" action="https://formspree.io/f/mqeblzdk" method="POST" novalidate>
+                        <div class="form__group">
+                            <label for="name" class="form__label">Name</label>
+                            <input type="text" id="name" name="name" class="form__input" placeholder="Your name" required>
+                            <span class="form__error" id="name-error"></span>
+                        </div>
+
+                        <div class="form__group">
+                            <label for="email" class="form__label">Email</label>
+                            <input type="email" id="email" name="email" class="form__input" placeholder="your.email@example.com" required>
+                            <span class="form__error" id="email-error"></span>
+                        </div>
+
+                        <div class="form__group">
+                            <label for="message" class="form__label">Message</label>
+                            <textarea id="message" name="message" class="form__input form__textarea" placeholder="Tell me about your project or inquiry..." rows="5" required></textarea>
+                            <span class="form__error" id="message-error"></span>
+                        </div>
+
+                        <button type="submit" class="btn btn--primary btn--full" data-content="contact.form.submitText">Send Message</button>
+
+                        <div class="form__success" id="form-success" hidden>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                            </svg>
+                            <p data-content="contact.form.successMessage">Thank you! Your message has been sent successfully.</p>
+                        </div>
+
+                        <div class="form__error-message" id="form-error" hidden>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="12" y1="8" x2="12" y2="12"></line>
+                                <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                            </svg>
+                            <p>Sorry, there was an error sending your message. Please try again.</p>
+                        </div>
+                    </form>
+
+                    <div class="contact__info fade-in">
+                        <div class="contact__info-item">
+                            <h3 data-content="contact.connectTitle">Connect With Me</h3>
+                            <p data-content="contact.connectDescription">Feel free to reach out through the form or connect with me on professional networks.</p>
+                        </div>
+
+                        <div class="contact__links">
+                            <a href="https://linkedin.com/in/yourprofile" class="contact__link" data-content-href="personal.linkedIn" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                                </svg>
+                                <span>LinkedIn</span>
+                            </a>
+
+                            <a href="#" class="contact__link" id="email-link" aria-label="Send Email">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                </svg>
+                                <span id="email-text">Email</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__brand">
+                    <a href="#" class="footer__logo" data-content="personal.name">YourName</a>
+                    <p class="footer__tagline" data-content="footer.tagline">Product Owner & Business Analyst</p>
+                </div>
+
+                <!-- Footer navigation rendered dynamically from content.js -->
+                <nav class="footer__nav">
+                    <a href="#hero" class="footer__link">Home</a>
+                    <a href="#about" class="footer__link">About</a>
+                    <a href="#projects" class="footer__link">Projects</a>
+                    <a href="#contact" class="footer__link">Contact</a>
+                </nav>
+            </div>
+
+            <div class="footer__bottom">
+                <p class="footer__copyright">&copy; <span id="current-year"></span> <span data-content="personal.name">Your Name</span>. <span data-content="footer.copyright">All rights reserved.</span></p>
+                <button class="footer__back-to-top" id="back-to-top" aria-label="Back to top">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="18 15 12 9 6 15"></polyline>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Content.js must load BEFORE main.js -->
+    <script src="js/content.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
