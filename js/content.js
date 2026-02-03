@@ -68,7 +68,7 @@ const siteContent = {
     // ========================================
     meta: {
         pageTitle: "Gayanjith | Product Owner & Business Analyst",
-        description: "Product Owner & Business Analyst with 10+ years of experience in health tech. Specializing in product discovery, requirement management, and solution design.",
+        description: "Product Owner & Business Analyst with 10+ years of experience in software product development. Specializing in product discovery, requirement management, and solution design.",
         keywords: "Product Owner, Business Analyst, Health Tech, Agile, Scrum, Product Discovery",
         ogTitle: "Gayanjith - Product Owner & Business Analyst",
         ogDescription: "10+ years of experience transforming healthcare through innovative digital solutions.",
@@ -91,7 +91,7 @@ const siteContent = {
     hero: {
         greeting: "Hello.",
         headline: "I'm Gayanjith.",
-        subtitle: "Product Owner & Business Analyst specializing in health tech.",
+        subtitle: "Product Owner & Business Analyst specializing in Product Discovery.",
         buttons: {
             primary: { text: "View My Work", href: "#projects" },
             secondary: { text: "Get in Touch", href: "#contact" },
@@ -106,12 +106,12 @@ const siteContent = {
         sectionTitle: "About Me",
         yearsExperience: "10+",
         profileImage: {
-            src: placeholderImages.profile,
+            src: "assets/images/profile picture.png",
             alt: "Gayanjith - Product Owner & Business Analyst"
         },
         paragraphs: [
-            "With over a decade of experience in the health tech industry, I specialize in bridging the gap between business needs and technical solutions. My passion lies in creating digital products that make healthcare more accessible, efficient, and patient-centered.",
-            "Throughout my career, I've had the privilege of working with healthcare providers, and health tech startups to deliver products that genuinely improve patient outcomes and streamline clinical workflows.",
+            "With over a decade of experience in the health tech industry, I specialize in bridging the gap between business needs and technical solutions.",
+            "Throughout my career, I've had the privilege of working with customers, product management and development teams to deliver products that genuinely improve patient outcomes and streamline clinical workflows.",
             "I believe in a collaborative approach to product development, combining deep domain expertise with agile methodologies to deliver value incrementally while maintaining a clear strategic vision."
         ],
         competenciesTitle: "Key Competencies",
@@ -140,94 +140,84 @@ const siteContent = {
     projects: [
         {
             id: 1,
-            title: "Patient Portal Redesign",
-            image: placeholderImages.project1,
+            title: "Medication Management System",
+            image: "assets/images/medication project.png",
             industry: "Health Tech",
             role: "Product Owner",
-            shortDescription: "Led the complete redesign of a patient portal serving 500K+ users, improving engagement by 45% and reducing support tickets by 30%.",
+            shortDescription: "Led the redesign of the medication management module of the EHR system used by 100,000+ users, improving customer satisfaction by 30% and reducing technical debt and support ticket volume significantly.",
             outcomes: [
-                { value: "45%", label: "Engagement Increase" },
-                { value: "30%", label: "Fewer Support Tickets" }
+                { value: "30%", label: "Customer Satisfaction Increase" },
+                { value: "40%", label: "Fewer Support Tickets" }
             ],
             // Modal details
-            fullDescription: "A comprehensive redesign of a patient portal serving over 500,000 users across multiple healthcare facilities.",
+            fullDescription: "A comprehensive redesign of the medication management system serving over 100,000 users across multiple healthcare facilities.",
             duration: "18 months",
-            challenge: "The existing portal had low engagement rates and high support ticket volume due to confusing navigation and outdated UX patterns.",
-            solution: "Led a user-centered redesign process, conducting extensive user research, defining personas, and facilitating design sprints with cross-functional teams.",
-            keyOutcomes: [
-                "45% increase in patient engagement",
-                "30% reduction in support tickets",
-                "NPS score improved from 32 to 67",
-                "Mobile usage increased by 120%"
-            ]
+            challenge: "The existing system had low customer satisfaction rates and high support ticket volume due to confusing navigation and outdated UX patterns.",
+            solution: "Led a user-centered redesign process, conducting extensive user research, defining personas, and facilitating design sprints with cross-functional teams. This resulted in a 30% increase in customer satisfaction and a 40% reduction in support ticket volume.",
         },
         {
             id: 2,
-            title: "Telehealth Platform Launch",
-            image: placeholderImages.project2,
+            title: "API based Open Services Platform",
+            image: "assets/images/open services project.png",
             industry: "Health Tech",
             role: "Business Analyst",
-            shortDescription: "Defined requirements and coordinated delivery of a telehealth solution that enabled remote consultations for 200+ physicians.",
+            shortDescription: "Drove the requirement analysis and service design for a new API based Open Services Platform for a major healthcare system.",
             outcomes: [
-                { value: "200+", label: "Physicians Onboarded" },
-                { value: "50K", label: "Consultations/Month" }
+                { value: "Service Design", label: "Completed in 2 months" },
+                { value: "Service Build Coordination", label: "Ongoing" }
             ],
             // Modal details
-            fullDescription: "End-to-end delivery of a telehealth solution enabling remote consultations for a network of physicians.",
+            fullDescription: "End-to-end delivery of an API based Open Services Platform for a major healthcare system that enables other health tech software vendors to integrate with the system.",
             duration: "12 months",
-            challenge: "Rapid pivot required during the pandemic to enable remote patient consultations while maintaining HIPAA compliance.",
-            solution: "Defined comprehensive requirements, mapped integration points with existing EHR systems, and coordinated delivery across multiple vendor teams.",
+            challenge: "Even though we had 10 certified integrated partner solutions, only 2 of them were actually being used by the customers. This creates a bottleneck in the revenue growth.",
+            solution: "Defined comprehensive requirements, mapped the current customer journey and identified the pain points. This resulted in us identifying major gaps in the current platform and the ability to add new services to the platform.",
             keyOutcomes: [
-                "200+ physicians successfully onboarded",
-                "50,000+ monthly consultations",
-                "98.5% video call success rate",
-                "Average wait time reduced by 65%"
+                "A new service design for the platform designed within 2 months",
+                "Buy in from all the key stakeholders in the company",
+                "A clear implementation plan for the new services"
             ]
         },
         {
             id: 3,
-            title: "Clinical Workflow Optimization",
-            image: placeholderImages.project3,
-            industry: "Health Tech",
-            role: "Product Owner",
-            shortDescription: "Streamlined clinical documentation workflows, reducing average documentation time by 40% while maintaining compliance.",
+            title: "Fikazo - a social network for newbies in Sweden",
+            image: "assets/images/fikazo project.png",
+            industry: "Social enterprise",
+            role: "Startup Founder",
+            shortDescription: "Created a social network for immigrants in Sweden to help them integrate into the country and find their way around.",
             outcomes: [
-                { value: "40%", label: "Time Saved" },
-                { value: "100%", label: "Compliance Maintained" }
+                { value: "70", label: "Registered Users" },
+                { value: "10", label: "Friendships" }
             ],
             // Modal details
-            fullDescription: "Streamlined clinical documentation workflows for a major hospital network.",
-            duration: "10 months",
-            challenge: "Physicians were spending excessive time on documentation, leading to burnout and reduced patient face time.",
-            solution: "Conducted workflow analysis, identified automation opportunities, and implemented smart templates with voice-to-text capabilities.",
+            fullDescription: "Created a social network for immigrants in Sweden to help them integrate into the country and find their way around.",
+            duration: "4 months",
+            challenge: "Immigrants find it difficult to integrate into the country and find their way around.",
+            solution: "Conducted interviews with immigrants and locals to understand the pain points and the needs of the community. This resulted in us creating a social network that helps immigrants integrate into the country and find their way around by making meaningful connections with the locals.",
             keyOutcomes: [
-                "40% reduction in documentation time",
-                "100% compliance maintained",
-                "Physician satisfaction increased by 55%",
-                "More time for patient care"
+                "70 registered users within a month of launching the MVP",
+                "10 friendships made between immigrants and locals"
             ]
         },
         {
             id: 4,
-            title: "Health Data Analytics Dashboard",
-            image: placeholderImages.project4,
-            industry: "Health Tech",
-            role: "Business Analyst",
-            shortDescription: "Designed and delivered an analytics platform providing actionable insights to healthcare administrators across 15 facilities.",
+            title: "OpenIDEO New Life Challenge",
+            image: "assets/images/new life challenge project.png",
+            industry: "Health and social care",
+            role: "Product Designer",
+            shortDescription: "Designed and delivered a prototype of a mobile app for OpenIDEO New Life Challenge",
             outcomes: [
-                { value: "15", label: "Facilities Served" },
-                { value: "Real-time", label: "Data Insights" }
+                { value: "Top 5", label: "Ideas in the competition" },
+                { value: "200+", label: "submissions from 100+ countries" }
             ],
             // Modal details
-            fullDescription: "An analytics platform providing actionable insights to healthcare administrators.",
-            duration: "8 months",
-            challenge: "Healthcare administrators lacked visibility into operational metrics, making data-driven decisions difficult.",
-            solution: "Gathered requirements from stakeholders across 15 facilities, designed intuitive dashboards, and established automated reporting pipelines.",
+            fullDescription: "An application that gamifies the process of new parents getting ready for their new baby.",
+            duration: "3 months",
+            challenge: "The current process of new parents getting ready for their new baby is not engaging and not fun and seen more like a challenge than a journey.",
+            solution: "Interviewed expecting parents, social and healthcare professionals to understand the pain points and the needs of the community. This resulted in us creating a mobile app that gamifies the process of new parents getting ready for their new baby.",
             keyOutcomes: [
-                "15 facilities served",
-                "Real-time data insights",
-                "25% improvement in resource allocation",
-                "Executive reporting time cut by 70%"
+                "A prototype of the mobile app was designed and submitted to the competition",
+                "Our solution was selected as one of the top 5 ideas in the competition",
+                "We got invited to the OpenIDEO office in San Francisco"
             ]
         }
     ],

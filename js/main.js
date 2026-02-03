@@ -267,6 +267,9 @@
     // Initialization
     // ===================================
     function init() {
+        // #region agent log
+        fetch('http://127.0.0.1:7242/ingest/552ef8a5-6204-4c12-8a22-556ebdd79bf0',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'main.js:init',message:'init started',data:{siteContentDefined:typeof siteContent!=='undefined'},timestamp:Date.now(),sessionId:'debug-session',hypothesisId:'E'})}).catch(()=>{});
+        // #endregion
         // Render content from siteContent first
         renderContent();
 
@@ -279,11 +282,28 @@
         setupProjectModal();
         setupBackToTop();
         setupEmailLink();
+        setupCvLinkLogging();
 
         // Trigger initial animations for visible elements
         setTimeout(() => {
             checkFadeElements();
         }, 100);
+        // #region agent log
+        fetch('http://127.0.0.1:7242/ingest/552ef8a5-6204-4c12-8a22-556ebdd79bf0',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'main.js:init',message:'init completed',data:{},timestamp:Date.now(),sessionId:'debug-session',hypothesisId:'E'})}).catch(()=>{});
+        // #endregion
+    }
+
+    // ===================================
+    // CV link click logging (debug)
+    // ===================================
+    function setupCvLinkLogging() {
+        document.addEventListener('click', (e) => {
+            const a = e.target.closest('a[href*="cv"], a[href*="documents/"]');
+            if (!a) return;
+            // #region agent log
+            fetch('http://127.0.0.1:7242/ingest/552ef8a5-6204-4c12-8a22-556ebdd79bf0',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'main.js:setupCvLinkLogging',message:'CV/doc link clicked',data:{href:a.getAttribute('href')},timestamp:Date.now(),sessionId:'debug-session',hypothesisId:'A'})}).catch(()=>{});
+            // #endregion
+        }, true);
     }
 
     // ===================================
@@ -502,6 +522,9 @@
             successMessage.hidden = true;
             if (errorMessage) errorMessage.hidden = true;
 
+            // #region agent log
+            fetch('http://127.0.0.1:7242/ingest/552ef8a5-6204-4c12-8a22-556ebdd79bf0',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'main.js:handleFormSubmit',message:'submitting form',data:{action:contactForm.action},timestamp:Date.now(),sessionId:'debug-session',hypothesisId:'C'})}).catch(()=>{});
+            // #endregion
             // Submit to Formspree via AJAX
             const formData = new FormData(contactForm);
 
@@ -533,8 +556,13 @@
                 }
             })
             .finally(() => {
+                // #region agent log
+                const hasSiteContent = typeof siteContent !== 'undefined';
+                const submitText = hasSiteContent && siteContent.contact && siteContent.contact.form ? siteContent.contact.form.submitText : 'Send Message';
+                fetch('http://127.0.0.1:7242/ingest/552ef8a5-6204-4c12-8a22-556ebdd79bf0',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'main.js:handleFormSubmit:finally',message:'form submit finished',data:{hasSiteContent,submitText},timestamp:Date.now(),sessionId:'debug-session',hypothesisId:'C'})}).catch(()=>{});
+                // #endregion
                 submitBtn.disabled = false;
-                submitBtn.textContent = siteContent.contact.form.submitText;
+                submitBtn.textContent = submitText;
             });
         }
     }
@@ -550,7 +578,11 @@
         // Check if empty
         if (!input.value.trim()) {
             isValid = false;
-            errorMessage = `${input.labels[0].textContent} is required`;
+            // #region agent log
+            const hasLabels = input.labels && input.labels.length > 0;
+            fetch('http://127.0.0.1:7242/ingest/552ef8a5-6204-4c12-8a22-556ebdd79bf0',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'main.js:validateField',message:'empty field',data:{inputId:input.id,hasLabels,labelsLength:input.labels?input.labels.length:0},timestamp:Date.now(),sessionId:'debug-session',hypothesisId:'B'})}).catch(()=>{});
+            // #endregion
+            errorMessage = hasLabels ? `${input.labels[0].textContent} is required` : 'This field is required';
         }
         // Email validation
         else if (input.type === 'email' && !isValidEmail(input.value)) {
@@ -622,6 +654,9 @@
     function openProjectModal(projectId) {
         // Find project in siteContent
         const project = siteContent.projects.find(p => p.id === projectId);
+        // #region agent log
+        fetch('http://127.0.0.1:7242/ingest/552ef8a5-6204-4c12-8a22-556ebdd79bf0',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'main.js:openProjectModal',message:'modal open',data:{projectId,projectFound:!!project,projectTitle:project?project.title:null},timestamp:Date.now(),sessionId:'debug-session',hypothesisId:'D'})}).catch(()=>{});
+        // #endregion
         if (!project) return;
 
         const modalTitle = modal.querySelector('.modal__title');
