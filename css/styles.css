@@ -629,6 +629,7 @@ ul {
 }
 
 .project-card {
+    min-width: 0;
     background-color: var(--background);
     border-radius: var(--border-radius-lg);
     overflow: hidden;
@@ -689,13 +690,18 @@ ul {
 }
 
 .project-card__content {
+    min-width: 0;
     padding: var(--space-lg);
+    text-align: center;
+    overflow-wrap: break-word;
 }
 
 .project-card__tags {
     display: flex;
+    flex-wrap: wrap;
     gap: var(--space-sm);
     margin-bottom: var(--space-md);
+    justify-content: center;
 }
 
 .project-card__tag {
@@ -737,12 +743,16 @@ ul {
 
 .project-card__outcomes {
     display: flex;
+    flex-wrap: wrap;
     gap: var(--space-lg);
     padding-top: var(--space-md);
     border-top: 1px solid var(--border);
+    justify-content: center;
 }
 
 .project-card__outcome {
+    min-width: 0;
+    flex: 0 0 auto;
     text-align: center;
 }
 
@@ -758,6 +768,7 @@ ul {
     display: block;
     font-size: var(--font-size-xs);
     color: var(--text-lighter);
+    white-space: pre-line;
 }
 
 /* ===================================

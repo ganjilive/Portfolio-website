@@ -163,8 +163,8 @@ const siteContent = {
             role: "Business Analyst",
             shortDescription: "Drove the requirement analysis and service design for a new API based Open Services Platform for a major healthcare system.",
             outcomes: [
-                { value: "Service Design", label: "Completed in 2 months" },
-                { value: "Service Build Coordination", label: "Ongoing" }
+                { value: "2 months", label: "to complete product discovery\nand service design" },
+            
             ],
             // Modal details
             fullDescription: "End-to-end delivery of an API based Open Services Platform for a major healthcare system that enables other health tech software vendors to integrate with the system.",
