@@ -161,7 +161,7 @@ const siteContent = {
             ],
             // Modal details
             fullDescription: "A comprehensive redesign of the medication management system serving over 100,000 users across multiple healthcare facilities.",
-            duration: "18 months",
+            duration: "24 months",
             challenge: "The existing system had low customer satisfaction rates and high support ticket volume due to confusing navigation and outdated UX patterns.",
             solution: "Led a user-centered redesign process, conducting extensive user research, defining personas, and facilitating design sprints with cross-functional teams. This resulted in a 30% increase in customer satisfaction and a 40% reduction in support ticket volume.",
             keyOutcomes: [
@@ -172,7 +172,7 @@ const siteContent = {
         },
         {
             id: 2,
-            title: "API based Open Services Platform",
+            title: "API Platform",
             image: "assets/images/open services project.png",
             industry: "Health Tech",
             role: "Business Analyst",
@@ -194,7 +194,7 @@ const siteContent = {
         },
         {
             id: 3,
-            title: "Fikazo - a social network for newbies in Sweden",
+            title: "Fikazo - a Social Network for Newbies in Sweden",
             image: "assets/images/fikazo project.png",
             industry: "Social enterprise",
             role: "Startup Founder",
@@ -237,7 +237,7 @@ const siteContent = {
         },
         {
             id: 5,
-            title: "Enable SNOMEDCT coded clinical documentation",
+            title: "SNOMEDCT Coded Clinical Documentation",
             image: "assets/images/project-snomed.png",
             industry: "Health tech",
             role: "Business Analyst",
@@ -254,6 +254,27 @@ const siteContent = {
                 "Successful project completion within the given time frame",
                 "One of the few Business Analysts in the company to be certified as a SNOMED CT Implementer",
                 "The delivered functionality was used by the customers to improve the quality of the data and to improve the efficiency of the users"
+            ]
+        },
+        {
+            id: 6,
+            title: "OpenEHR based health data platform and app development studio",
+            image: "assets/images/project-openehr.png",
+            industry: "Health Tech",
+            role: "Business Analyst",
+            shortDescription: "Currently working on this project to separate health data from applications and make health data more accessible and interoperable.",
+            outcomes: [
+                { value: "100%", label: "Ownership of requirement management" },
+                
+            ],
+            // Modal details
+            fullDescription: "A service to separate health data from applications and make health data more accessible and interoperable using OpenEHR and FHIR standards. We also intend to enable non-engineers develop health tech applicaitons.",
+            duration: "24 months",
+            challenge: "Company's product portfolio needs to be modernized. Customers are demanding more modern and flexible solutions where rapidly changing requirements need to be met, and health data needs to be more accessible and interoperable to achieve higher patient safety and operational efficiency.",
+            solution: "Design an OpenEHR and FHIR standards based health data platform and a no-code application development studio to enable non-engineers develop health tech applicaitons. Working with requirement management, product discovery and solution design.",
+            keyOutcomes: [
+                "Requirements are managed according to MDR and NMI compliance standards",
+                "Product is already being used in an EU funded project"
             ]
         }
     ],
