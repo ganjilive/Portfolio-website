@@ -82,6 +82,7 @@ const siteContent = {
         { label: "Home", href: "#hero", isButton: false },
         { label: "About", href: "#about", isButton: false },
         { label: "Projects", href: "#projects", isButton: false },
+        { label: "Articles", href: "#articles", isButton: false },
         { label: "Contact", href: "#contact", isButton: true }
     ],
 
@@ -131,6 +132,15 @@ const siteContent = {
     projectsSection: {
         title: "Featured Projects",
         subtitle: "A selection of projects where I've driven product strategy and delivery in the health tech space."
+    },
+
+    // ========================================
+    // ARTICLES SECTION
+    // ========================================
+    articlesSection: {
+        title: "Articles",
+        subtitle: "Thoughts and insights on product management, business analysis, and technology.",
+        mediumProfileUrl: "https://medium.com/@gayanjith"  // Update with your Medium profile URL
     },
 
     // ========================================
@@ -220,6 +230,104 @@ const siteContent = {
                 "We got invited to the OpenIDEO office in San Francisco"
             ]
         }
+    ],
+
+    // ========================================
+    // ARTICLES DATA
+    // Add/remove/edit articles here
+    // ========================================
+    articles: [
+        {
+            id: 1,
+            title: "Sprint story: How to fail your product in 5 days",
+            description: "A story about the very first GV style Design Sprint that I participated in.",
+            publishedDate: "2016-09-07",
+            readTime: "4 min read",
+            thumbnail: "assets/images/articles/Article-DS.jpg",
+            tags: ["Product Design", "Design Sprint"],
+            mediumUrl: "https://medium.com/sprint-stories/sprint-story-how-to-fail-your-product-in-5-days-3dab0938596e"
+        },
+        {
+            id: 2,
+            title: "6 Things to do when taking part in an OpenIDEO Challenge.",
+            description: "Lessons learned from taking part in an OpenIDEO Challenge.",
+            publishedDate: "2018-05-03",
+            readTime: "5 min read",
+            thumbnail: "assets/images/articles/Article-open-ideo.jpg",
+            tags: ["Product Design", "Design Thinking"],
+            mediumUrl: "https://medium.com/@gayanjith/6-things-to-do-when-taking-part-in-an-openideo-challenge-c0fb9ccff1ff"
+        },
+        {
+            id: 3,
+            title: "How I almost failed as a Product Owner.",
+            description: "A beginner’s story of exploring the world of Product Ownership",
+            publishedDate: "2019-12-11",
+            readTime: "6 min read",
+            thumbnail: "assets/images/articles/Article-PO.jpg",
+            tags: ["Product Owner", "Product Management"],
+            mediumUrl: "https://medium.com/@gayanjith/how-i-almost-failed-as-a-product-owner-72bdf1ef04bb"
+        },
+        {
+            id: 4,
+            title: "Data vs Expert Opinion: A guide to better decision making.",
+            description: "If you have experienced a battle between data and expert opinion, this write-up is for you.",
+            publishedDate: "2020-11-15",
+            readTime: "3 min read",
+            thumbnail: "assets/images/articles/Article-decision-making.jpg",
+            tags: ["Business Analyst", "Product Management"],
+            mediumUrl: "https://medium.com/@gayanjith/data-vs-expert-opinion-3dea316107fe"
+        },
+        {
+            id: 5,
+            title: "Future Health — Challenging the status quo.",
+            description: "Asking the right questions to challenge the status quo of our healthcare system.",
+            publishedDate: "2024-11-07",
+            readTime: "6 min read",
+            thumbnail: "assets/images/articles/Article-future-health.jpg",
+            tags: ["Business Analyst", "Product Management"],
+            mediumUrl: "https://gayanjith.medium.com/future-health-challenging-the-status-quo-8026303df108"
+        },
+        {
+            id: 6,
+            title: "The Lean Product Canvas: The Ultimate Tool for Product Discovery.",
+            description: "Explaining the LPC with a real world example.",
+            publishedDate: "2024-12-02",
+            readTime: "9 min read",
+            thumbnail: "assets/images/articles/Article-LPC.jpg",
+            tags: ["Product Discovery", "Product Management"],
+            mediumUrl: "https://medium.com/@gayanjith/the-lean-product-canvas-the-ultimate-tool-for-product-discovery-074dc9a50940"
+        },
+        {
+            id: 7,
+            title: "Common Pitfalls in Decision-Making and a Proven Framework to Overcome Them.",
+            description: "Presenting a proven framework for decision making.",
+            publishedDate: "2024-12-02",
+            readTime: "9 min read",
+            thumbnail: "assets/images/articles/Article-decision-framework.jpg",
+            tags: ["Product Discovery", "Product Management"],
+            mediumUrl: "https://medium.com/@gayanjith/common-pitfalls-in-decision-making-and-a-proven-framework-to-overcome-them-40bf52d87380"
+        },
+        {
+            id: 8,
+            title: "Unpacking product roles: Business Analyst, Product Owner and Product Manager.",
+            description: "Explaining the differences and similaritiesbetween the three product roles.",
+            publishedDate: "2025-05-21",
+            readTime: "3 min read",
+            thumbnail: "assets/images/articles/Article-roles.jpg",
+            tags: ["Business Analyst", "Product Manager"],
+            mediumUrl: "https://medium.com/@gayanjith/unpacking-product-roles-business-analyst-product-owner-and-product-manager-3e22427eaf37"
+        },
+        {
+            id: 9,
+            title: "Business Analysts, what have we done?.",
+            description: "Taking a close look into what BAs do in 2025 in the IT industry.",
+            publishedDate: "2025-02-02",
+            readTime: "4 min read",
+            thumbnail: "assets/images/articles/Article-BA.jpg",
+            tags: ["Business Analyst", "Design Thinking"],
+            mediumUrl: "https://medium.com/@gayanjith/business-analysts-what-have-we-done-bfd19c7aecfe"
+        }
+
     ],
 
     // ========================================

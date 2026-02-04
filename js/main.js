@@ -92,8 +92,58 @@
         // Render projects
         renderProjects();
 
+        // Render articles
+        renderArticles();
+
         // Render footer navigation
         renderFooterNav();
+    }
+
+    // ===================================
+    // Format Date Helper
+    // ===================================
+    function formatDate(dateString) {
+        const options = { year: 'numeric', month: 'short', day: 'numeric' };
+        return new Date(dateString).toLocaleDateString('en-US', options);
+    }
+
+    // ===================================
+    // Render Articles
+    // ===================================
+    function renderArticles() {
+        const container = document.getElementById('articles-grid');
+        if (!container || !siteContent.articles) return;
+
+        container.innerHTML = siteContent.articles.map(article => `
+            <article class="article-card fade-in">
+                <a href="${article.mediumUrl}" class="article-card__link" target="_blank" rel="noopener noreferrer">
+                    <div class="article-card__image">
+                        <img src="${article.thumbnail}" alt="${article.title}" loading="lazy">
+                    </div>
+                    <div class="article-card__content">
+                        <div class="article-card__meta">
+                            <span class="article-card__date">${formatDate(article.publishedDate)}</span>
+                            <span class="article-card__read-time">${article.readTime}</span>
+                        </div>
+                        <h3 class="article-card__title">${article.title}</h3>
+                        <p class="article-card__description">${article.description}</p>
+                        <div class="article-card__tags">
+                            ${article.tags.map(tag => `<span class="article-card__tag">${tag}</span>`).join('')}
+                        </div>
+                        <span class="article-card__cta">
+                            Read on Medium
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </span>
+                    </div>
+                </a>
+            </article>
+        `).join('');
+
+        // Re-observe new fade elements
+        observeNewFadeElements();
     }
 
     // ===================================
