@@ -83,6 +83,7 @@ const siteContent = {
         { label: "About", href: "#about", isButton: false },
         { label: "Projects", href: "#projects", isButton: false },
         { label: "Articles", href: "#articles", isButton: false },
+        { label: "Recommendations", href: "#recommendations", isButton: false },
         { label: "Contact", href: "#contact", isButton: true }
     ],
 
@@ -111,9 +112,8 @@ const siteContent = {
             alt: "Gayanjith - Product Owner & Business Analyst"
         },
         paragraphs: [
-            "With over a decade of experience in the health tech industry, I specialize in bridging the gap between business needs and technical solutions.",
-            "Throughout my career, I've had the privilege of working with customers, product management and development teams to deliver products that genuinely improve patient outcomes and streamline clinical workflows.",
-            "I believe in a collaborative approach to product development, combining deep domain expertise with agile methodologies to deliver value incrementally while maintaining a clear strategic vision."
+            "I started my career in Sri Lanka as an Associate Business Analyst after completing my Information Technology degree. In 2020, I made the move to Sweden to work as a Product Owner, and I'm currently a Senior Business Analyst.",
+            "While I've primarily worked in health tech, I've developed domain-agnostic skills that allow me to adapt quickly to new industries. I bring expertise in Product Discovery, Business Analysis, and Product Ownership."
         ],
         competenciesTitle: "Key Competencies",
         competencies: [
@@ -154,7 +154,7 @@ const siteContent = {
             image: "assets/images/medication project.png",
             industry: "Health Tech",
             role: "Product Owner",
-            shortDescription: "Led the redesign of the medication management module of the EHR system used by 100,000+ users, improving customer satisfaction by 30% and reducing technical debt and support ticket volume significantly.",
+            shortDescription: "Led the redesign of the medication management module of the EHR system used by 100,000+ users.",
             outcomes: [
                 { value: "30%", label: "Customer Satisfaction Increase" },
                 { value: "40%", label: "Fewer Support Tickets" }
@@ -327,6 +327,51 @@ const siteContent = {
             tags: ["Business Analyst", "Design Thinking"],
             mediumUrl: "https://medium.com/@gayanjith/business-analysts-what-have-we-done-bfd19c7aecfe"
         }
+
+    ],
+
+    // ========================================
+    // RECOMMENDATIONS SECTION
+    // ========================================
+    recommendationsSection: {
+        title: "What Colleagues Say",
+        subtitle: "Recommendations from professionals I've had the pleasure of working with.",
+        linkedInUrl: "https://linkedin.com/in/gayanjith"
+    },
+
+    // ========================================
+    // RECOMMENDATIONS DATA
+    // Add/remove/edit recommendations here
+    // ========================================
+    recommendations: [
+        {
+            id: 1,
+            name: "Yasith Abeynayaka",
+            title: "Agile Coach",
+            company: "Cambio Healthcare Systems",
+            relationship: "Gayanjith reported to Yasith at Cambio Software Engineering",
+            text: "Gayanjith hands-down the ablest young talent I have ever lead. He was one of the new hires to our then growing design team. Notwithstanding it being his first job, he became independent and a superstar within no time. His contributions include rescuing one of our struggling product, ending the consumer frustration inflow, and leading our product teams to practice collaborative design. Yet, his most celebrated trait is his learnability and versatility. He accustomed to each new challenge in a short space, including taking over the product owner role to be one of the company's successful product managers ever seen, becoming an OpenIDEO competition winner and community mentor, and maturing to a lead designer with a record span. As his ex-manager, coach, and mentor, I'm incredibly proud of him and endorse him to any quest you may have in mind.",
+            date: "June 2021"
+        },
+        {
+            id: 2,
+            name: "Karin Henningsson",
+            title: "Senior Information Architect",
+            company: "Region Stockholm",
+            relationship: "Worked together at Cambio Healthcare Systems",
+            text: "I have worked with Gayanith for a little more than two years and have seen him move from a designer role into a Product Owner role. He takes his job very seriously and is thorough. He is humble about learning new skills and listens to advice. He is good at keeping track of his initiatives and backlog.",
+            date: "June 2021"
+        },
+        {
+            id: 3,
+            name: "Marcus Petersson",
+            title: "Senior Data Scientist",
+            company: "Cambio Healthcare Systems",
+            relationship: "Worked together at Cambio Healthcare Systems",
+            text: "Ganji is one of the smartest and friendliest people I've worked with. He is also very productive, innovative, curious and always strive to understand the background in order to identify a good solution. I've had many fun and fruitful discussions with Ganji during our years together at Cambio, and in particular when we worked closely together as Business Analysts in a very successful development project where we introduced a new medical terminology binding support feature in our EHR system. I've also had the honor of acting as a mentor for Ganji for a couple of years.",
+            date: "June 2021"
+        }
+        
 
     ],
 
