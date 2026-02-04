@@ -670,6 +670,7 @@ ul {
     justify-content: center;
     opacity: 0;
     transition: opacity var(--transition);
+    z-index: 2;
 }
 
 .project-card:hover .project-card__overlay {

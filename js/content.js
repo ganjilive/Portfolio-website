@@ -164,6 +164,11 @@ const siteContent = {
             duration: "18 months",
             challenge: "The existing system had low customer satisfaction rates and high support ticket volume due to confusing navigation and outdated UX patterns.",
             solution: "Led a user-centered redesign process, conducting extensive user research, defining personas, and facilitating design sprints with cross-functional teams. This resulted in a 30% increase in customer satisfaction and a 40% reduction in support ticket volume.",
+            keyOutcomes: [
+                "30% increase in customer satisfaction",
+                "40% reduction in support ticket volume",
+                "Improved navigation and UX across the medication management module"
+            ]
         },
         {
             id: 2,
@@ -177,8 +182,8 @@ const siteContent = {
             
             ],
             // Modal details
-            fullDescription: "End-to-end delivery of an API based Open Services Platform for a major healthcare system that enables other health tech software vendors to integrate with the system.",
-            duration: "12 months",
+            fullDescription: "Product discovery and solution design for an API based Open Services Platform for a eHealth ecosystem that enables other health tech software vendors to integrate with the company's health tech products.",
+            duration: "2 months",
             challenge: "Even though we had 10 certified integrated partner solutions, only 2 of them were actually being used by the customers. This creates a bottleneck in the revenue growth.",
             solution: "Defined comprehensive requirements, mapped the current customer journey and identified the pain points. This resulted in us identifying major gaps in the current platform and the ability to add new services to the platform.",
             keyOutcomes: [
@@ -228,6 +233,27 @@ const siteContent = {
                 "A prototype of the mobile app was designed and submitted to the competition",
                 "Our solution was selected as one of the top 5 ideas in the competition",
                 "We got invited to the OpenIDEO office in San Francisco"
+            ]
+        },
+        {
+            id: 5,
+            title: "Enable SNOMEDCT coded clinical documentation",
+            image: "assets/images/project-snomed.png",
+            industry: "Health tech",
+            role: "Business Analyst",
+            shortDescription: "Got certified as a SNOMED CT Implementer, and successfully implemented SNOMED CT coded clinical documentation functionality in the EHR system",
+            outcomes: [
+                { value: "SNOMED CT", label: "Certified Implementer"}
+            ],
+            // Modal details
+            fullDescription: "The only Business Analyst in a project to introduce new functionality to the EHR system to enable SNOMED CT coded clinical documentation.",
+            duration: "5 months",
+            challenge: "The current EHR system does not support SNOMED CT coded clinical documentation in a structured way and that results in a lot of manual work for the users when reporting data to quality registries and also prevents the EHR system to be smart.",
+            solution: "Completed the SNOMED CT Foundation and Implementation courses, and successfully implemented SNOMED CT coded clinical documentation functionality in the EHR system by giving extended features to create keywords coded with SNOMED CT codes.",
+            keyOutcomes: [
+                "Successful project completion within the given time frame",
+                "One of the few Business Analysts in the company to be certified as a SNOMED CT Implementer",
+                "The delivered functionality was used by the customers to improve the quality of the data and to improve the efficiency of the users"
             ]
         }
     ],

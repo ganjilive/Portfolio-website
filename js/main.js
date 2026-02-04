@@ -760,10 +760,12 @@
             <h4>Solution</h4>
             <p>${project.solution}</p>
 
+            ${project.keyOutcomes ? `
             <h4>Key Outcomes</h4>
             <ul>
                 ${project.keyOutcomes.map(outcome => `<li>${outcome}</li>`).join('')}
             </ul>
+            ` : ''}
         `;
 
         modal.classList.add('active');
