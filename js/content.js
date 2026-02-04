@@ -406,7 +406,7 @@ const siteContent = {
             title: "Senior Information Architect",
             company: "Region Stockholm",
             relationship: "Worked together at Cambio Healthcare Systems",
-            text: "I have worked with Gayanith for a little more than two years and have seen him move from a designer role into a Product Owner role. He takes his job very seriously and is thorough. He is humble about learning new skills and listens to advice. He is good at keeping track of his initiatives and backlog.",
+            text: "I have worked with Gayanjith for a little more than two years and have seen him move from a designer role into a Product Owner role. He takes his job very seriously and is thorough. He is humble about learning new skills and listens to advice. He is good at keeping track of his initiatives and backlog.",
             date: "June 2021"
         },
         {
