@@ -277,13 +277,22 @@
     }
 
     // ===================================
+    // Projects State
+    // ===================================
+    let showAllProjects = false;
+
+    // ===================================
     // Render Projects
     // ===================================
     function renderProjects() {
         const container = document.getElementById('projects-grid');
         if (!container || !siteContent.projects) return;
 
-        container.innerHTML = siteContent.projects.map(project => `
+        const projectsToShow = showAllProjects
+            ? siteContent.projects
+            : siteContent.projects.slice(0, 3);
+
+        container.innerHTML = projectsToShow.map(project => `
             <article class="project-card fade-in">
                 <div class="project-card__image">
                     <img src="${project.image}" alt="${project.title}" loading="lazy">
@@ -313,8 +322,36 @@
         // Re-setup project modal handlers after rendering
         setupProjectModalHandlers();
 
+        // Render "See More" button if more than 3 projects
+        renderSeeMoreButton();
+
         // Re-observe new fade elements
         observeNewFadeElements();
+    }
+
+    // ===================================
+    // Render "See More" Button for Projects
+    // ===================================
+    function renderSeeMoreButton() {
+        // Remove existing button if present
+        const existingBtn = document.querySelector('.projects__see-more');
+        if (existingBtn) existingBtn.remove();
+
+        // Only show button if there are more than 3 projects
+        if (!siteContent.projects || siteContent.projects.length <= 3) return;
+
+        const projectsGrid = document.querySelector('.projects__grid');
+        if (!projectsGrid) return;
+
+        const btn = document.createElement('button');
+        btn.className = 'btn btn--outline projects__see-more';
+        btn.textContent = showAllProjects ? 'Show Less' : 'See More Projects';
+        btn.addEventListener('click', () => {
+            showAllProjects = !showAllProjects;
+            renderProjects();
+        });
+
+        projectsGrid.after(btn);
     }
 
     // ===================================
@@ -481,6 +518,7 @@
         navToggle.addEventListener('click', () => {
             navToggle.classList.toggle('active');
             navMenu.classList.toggle('active');
+            header.classList.toggle('has-menu-open', navMenu.classList.contains('active'));
             document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
         });
 
@@ -489,6 +527,7 @@
             if (e.target.classList.contains('nav__link') || e.target.classList.contains('btn--nav-cta')) {
                 navToggle.classList.remove('active');
                 navMenu.classList.remove('active');
+                header.classList.remove('has-menu-open');
                 document.body.style.overflow = '';
             }
         });
@@ -498,6 +537,7 @@
             if (e.key === 'Escape' && navMenu.classList.contains('active')) {
                 navToggle.classList.remove('active');
                 navMenu.classList.remove('active');
+                header.classList.remove('has-menu-open');
                 document.body.style.overflow = '';
             }
         });

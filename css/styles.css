@@ -339,18 +339,23 @@ ul {
 
     .nav__menu {
         position: fixed;
-        top: var(--header-height);
+        top: 0;
         left: 0;
         right: 0;
         bottom: 0;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        gap: var(--space-2xl);
-        background-color: var(--background);
+        gap: var(--space-lg);
+        padding: calc(var(--header-height) + var(--space-xl)) var(--space-xl) var(--space-2xl);
+        background: #ffffff !important;
+        box-shadow: none;
         opacity: 0;
         visibility: hidden;
-        transition: all var(--transition);
+        transition: opacity var(--transition), visibility var(--transition);
+        z-index: 9998;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
     }
 
     .nav__menu.active {
@@ -358,8 +363,49 @@ ul {
         visibility: visible;
     }
 
+    /* When menu is open, ensure header (and menu) sit above page content */
+    .header.has-menu-open {
+        z-index: 10000;
+    }
+
+    .nav__menu .nav__item {
+        width: 100%;
+        max-width: 280px;
+        text-align: center;
+    }
+
+    .nav__menu .nav__link,
+    .nav__menu .btn--nav-cta {
+        display: block;
+        width: 100%;
+        padding: var(--space-md) var(--space-lg);
+        font-size: var(--font-size-lg);
+        font-weight: 600;
+        color: var(--text-dark) !important;
+        text-align: center;
+        border-radius: var(--border-radius);
+        min-height: 48px;
+        line-height: 1.4;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nav__menu .nav__link:hover,
+    .nav__menu .nav__link.active {
+        color: var(--text-dark) !important;
+        background-color: var(--background-alt);
+    }
+
+    .nav__menu .btn--nav-cta {
+        background-color: var(--primary) !important;
+        color: #ffffff !important;
+        margin-top: var(--space-sm);
+    }
+
     .nav__link {
-        font-size: var(--font-size-xl);
+        font-size: var(--font-size-lg);
+        color: var(--text-dark);
     }
 
     .nav__toggle.active .nav__toggle-bar:nth-child(1) {
@@ -372,6 +418,10 @@ ul {
 
     .nav__toggle.active .nav__toggle-bar:nth-child(3) {
         transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    .header {
+        background-color: #ffffff;
     }
 }
 
@@ -771,6 +821,12 @@ ul {
     font-size: var(--font-size-xs);
     color: var(--text-lighter);
     white-space: pre-line;
+}
+
+/* Projects "See More" Button */
+.projects__see-more {
+    display: block;
+    margin: var(--space-xl) auto 0;
 }
 
 /* ===================================
